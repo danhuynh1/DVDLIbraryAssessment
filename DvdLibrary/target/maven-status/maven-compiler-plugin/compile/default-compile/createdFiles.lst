@@ -1,0 +1,8 @@
+ui\UserIOConsoleImpl.class
+dao\DVDLibraryDao.class
+ui\DVDLibraryView.class
+controller\DVDLibraryController.class
+ui\UserIO.class
+dto\DVD.class
+dao\DVDLibraryDaoFileImpl.class
+MainApplication\App.class
