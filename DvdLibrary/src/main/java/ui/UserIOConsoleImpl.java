@@ -3,11 +3,6 @@
 * Copyright (C) 2020 Wiley edu LLC - All Rights Reserved
 *********************************/
 package ui;
-
-/**
- *
- * @author Daniel
- */
 import java.util.Scanner;
 
 public class UserIOConsoleImpl implements UserIO {
@@ -210,10 +205,18 @@ public class UserIOConsoleImpl implements UserIO {
         return result;
     }
     
-       public boolean readYesNo(String prompt){
+    
+    /**
+     *A method that takes a case insensitve y/n to return a true/false boolean
+     *
+     * @param msgPrompt - String explaining what information you want from the user.
+     * @return y = true, n = false boolean
+     */
+    @Override
+    public boolean readYesNo(String prompt){
         boolean foundResult = false;
         while(!foundResult){
-            String sread = readString(prompt + ("(y\\n)"));
+            String sread = readString(prompt + ("(Y\\N)"));
             if(sread.equalsIgnoreCase("y")) return true;
             if(sread.equalsIgnoreCase("n")) return false;
             this.print("Input error. Please try again.");

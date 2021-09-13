@@ -3,6 +3,8 @@ package ui;
 /**
  *
  * @author Daniel
+ * 
+ * UserIO Interface
  */
 public interface UserIO {
     void print(String msg);

@@ -6,3 +6,4 @@ ui\UserIO.class
 dto\DVD.class
 dao\DVDLibraryDaoFileImpl.class
 MainApplication\App.class
+dao\DVDLibraryDaoException.class
