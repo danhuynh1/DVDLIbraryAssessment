@@ -121,14 +121,14 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao{
         String DVDAsText;
         List<DVD> DVDList = getAllDVDs();
         for (DVD currentDVD : DVDList) {
-            // turn a Student into a String
+
             DVDAsText = marshallDVD(currentDVD);
-            // write the Student object to the file
+
             out.println(DVDAsText);
-            // force PrintWriter to write line to the file
+
             out.flush();
         }
-        // Clean up
+
         out.close();
     }
 }
