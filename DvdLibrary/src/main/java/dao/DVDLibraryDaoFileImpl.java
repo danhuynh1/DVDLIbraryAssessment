@@ -83,16 +83,11 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao{
         }
 
         String currentLine;
-
         DVD currentDVD;
 
         while (scanner.hasNextLine()) {
-
             currentLine = scanner.nextLine();
-
             currentDVD = unmarshallDVD(currentLine);
-    
-
             DVDLibraryStorage.put(currentDVD.getTitle().toUpperCase(), currentDVD);
         }
         scanner.close();
@@ -121,11 +116,8 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao{
         String DVDAsText;
         List<DVD> DVDList = getAllDVDs();
         for (DVD currentDVD : DVDList) {
-
             DVDAsText = marshallDVD(currentDVD);
-
             out.println(DVDAsText);
-
             out.flush();
         }
 
