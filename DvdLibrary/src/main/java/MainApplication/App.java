@@ -19,6 +19,23 @@ import ui.UserIOConsoleImpl;
   *TODO: Create new LIBRARY_FILE.txt if not found
   *TODO: Limit MPAARatings, Standardize Release Date Format, stop user from inputting null on appropriate members
   *KNOWN BUGS: having member fields empty from creation/edit messes with saving, need to throw exceptions on null input from console
+
+  *Comments:
+  As I did this on my own, each function I regression tested with the rest of the program for each function, agile-like. 
+  I did all my handling with the Hashmap in the Model, any commands with Cntroller, and had UI functions in the View. 
+
+  Following the class code-along example, I interconnected each component so that limited imports were necessary, to result in loose-coupling.
+  Otherwise, java libraries were dependent injections, where initialization of instances are done in the App java class.
+
+  Encapsulation & Abstraction is used in private fields, using appropriate getter setters, and private methods for classes like the fileIO and marshalling
+  Using Interfaces for classes like contracts to make sure it is known how the class should function.
+  We use the External given UserIO class to easily reuse code.
+
+
+  The DVD Library hashmap is 'composed' of DVDs, which have members or attributes of the desired information
+
+  Data Marshalling is used to save the file in a way that can be reread in the future, in this case, members of a DVD object are seperated with the Delimiter :: and combined for storage in a txt file, then 
+  upon requiring the library again, the txt file is read, each line is unmarshalled  to a DVD Object for the DVDLibrary usage
   */
 
 public class App {
